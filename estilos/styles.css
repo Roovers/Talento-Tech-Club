@@ -1,0 +1,356 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+body {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.555), rgba(0, 0, 0, 0.562)),
+    url(../img/fondo.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100vh;
+  margin: 0;
+}
+
+.header {
+  background-image: linear-gradient(
+    112.1deg,
+    rgba(0, 0, 0, 0) 11.4%,
+    rgba(0, 2, 95, 0.555) 75.2%
+  );
+  color: rgb(255, 255, 255);
+
+  .logo-header {
+    width: 190px;
+    height: 126px;
+  }
+
+  .menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+
+  .contenido-menu {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  .opciones ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin-left: 400px;
+    padding: 0;
+  }
+
+  .opciones li {
+    list-style: none;
+  }
+
+  a {
+    font-family: "Rubik", sans-serif;
+    color: rgba(249, 173, 0);
+    font-family: "Rubik", serif;
+    font-size: 18px;
+    font-weight: 400;
+    margin-right: 20px;
+    letter-spacing: 5px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  a:hover {
+    transition: color 2s ease;
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 15px rgb(21, 0, 114), 0 0 10px rgb(92, 89, 255),
+      0 0 6px rgb(15, 0, 153);
+  }
+
+  .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: #ffeb3b;
+    transition: width 0.5s ease, left 0.5s ease;
+  }
+
+  .nav-link:hover::after {
+    width: 100%;
+    left: 0;
+  }
+}
+
+.promo {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 20px;
+
+  .card {
+    background-color: rgba(0, 0, 54, 0.5);
+    border: 1px solid rgba(249, 174, 0, 0.658);
+    color: rgba(255, 211, 107, 0.932);
+
+    .btn {
+      background-color: rgba(0, 0, 54, 0.5);
+      border: 1px solid rgba(249, 174, 0, 0.658);
+      color: rgba(255, 211, 107, 0.932);
+    }
+
+    .btn:hover {
+      transition: color 2s ease;
+      color: rgb(255, 255, 255);
+      text-shadow: 0 0 15px rgb(21, 0, 114), 0 0 10px rgb(92, 89, 255),
+        0 0 6px rgb(15, 0, 153);
+    }
+
+    i {
+      margin-left: 15px;
+    }
+  }
+}
+
+.noticias {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+
+  .card {
+    background-color: rgba(0, 0, 54, 0.5);
+    border: 1px solid rgba(249, 174, 0, 0.658);
+    color: rgba(255, 242, 213, 0.932);
+  }
+
+  iframe {
+    background-color: rgba(0, 0, 54, 0.5);
+    border: 1px solid rgba(249, 174, 0, 0.658);
+    color: rgba(255, 242, 213, 0.932);
+  }
+}
+
+.card-video-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.video iframe {
+  width: 200px;
+  height: 200px;
+}
+
+.footer {
+  background-image: linear-gradient(
+    292.1deg,
+    rgba(0, 0, 0, 0) 11.4%,
+    rgba(0, 2, 95, 0.555) 75.2%
+  );
+  color: rgb(255, 255, 255);
+  padding: 25px;
+
+  .footer-contenido {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .footer-social a {
+    font-size: 30px;
+    margin-right: 20px;
+    color: rgba(249, 173, 0);
+  }
+
+  .footer-social a:hover {
+    transition: color 0.3s ease;
+    color: rgba(255, 255, 255, 0.527);
+    text-shadow: 0 0 15px rgb(21, 0, 114), 0 0 10px rgb(92, 89, 255),
+      0 0 6px rgb(15, 0, 153);
+  }
+
+  .footer-info {
+    color: rgba(249, 173, 0);
+  }
+}
+
+.formulario {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.socio-form {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 1px solid rgb(0, 38, 255);
+  box-shadow: 0 0 10px rgb(238, 255, 0);
+  font-family: "Rubik", sans-serif;
+  color: rgba(249, 173, 0);
+  font-size: 18px;
+  font-weight: 400;
+  border-radius: 8px;
+  padding: 40px;
+  width: 100%;
+  max-width: 700px;
+  margin: 20px;
+}
+
+.socio-form h2 {
+  font-size: 1.8em;
+  color: rgba(249, 173, 0);
+  margin-bottom: 1.5em;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 1rem;
+  color: rgba(255, 211, 107, 0.932);
+  font-family: "Rubik", sans-serif;
+  margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group textarea {
+  color: white;
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border: 2px solid rgba(249, 174, 0, 0.658);
+  font-family: "Rubik", sans-serif;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  background-color: #00000000;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border: 1px solid rgb(0, 38, 255);
+  box-shadow: 0 0 10px rgb(238, 255, 0);
+}
+
+textarea {
+  resize: none;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(249, 174, 0, 0.658);
+  color: rgba(255, 211, 107, 0.932);
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  transition: color 2s ease;
+  transform: 4s;
+  color: rgb(255, 255, 255);
+  text-shadow: 0 0 15px rgb(21, 0, 114), 0 0 10px rgb(92, 89, 255),
+    0 0 6px rgb(15, 0, 153);
+  border: 1px solid rgb(0, 38, 255);
+  box-shadow: 0 0 10px rgb(238, 255, 0);
+}
+
+.card-producto {
+  width: 18rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 1px solid rgb(0, 38, 255);
+  box-shadow: 0 0 10px rgb(238, 255, 0);
+  font-family: "Rubik", sans-serif;
+  color: rgba(249, 173, 0);
+}
+
+.productos {
+  h2 {
+    color: rgba(249, 173, 0);
+  }
+  .fa-cart-plus {
+    margin-right: 12px;
+  }
+  .btn {
+    background-color: rgba(0, 0, 54, 0.5);
+    border: 1px solid rgba(249, 174, 0, 0.658);
+    color: rgba(255, 211, 107, 0.932);
+  }
+
+  .btn:hover {
+    transition: color 2s ease;
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 15px rgb(21, 0, 114), 0 0 10px rgb(92, 89, 255),
+      0 0 6px rgb(15, 0, 153);
+  }
+
+  .h-100 {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgb(0, 38, 255);
+    box-shadow: 0 0 10px rgb(238, 255, 0);
+    font-family: "Rubik", sans-serif;
+    color: rgba(249, 173, 0);
+  }
+}
+
+@media (max-width: 767px) {
+  body {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .noticias {
+      margin-left: 20px;
+    }
+  }
+
+  .header .menu {
+    .logo-header {
+      display: none;
+    }
+
+    .contenido-menu {
+      padding: 25px;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+
+    .opciones ul {
+      display: flex;
+      justify-content: end;
+      gap: 10px;
+      margin: 0px;
+    }
+
+    a {
+      font-size: 16px;
+      letter-spacing: 3px;
+      margin-right: 0;
+    }
+  }
+
+  iframe {
+    display: none;
+  }
+
+  .promo {
+    display: none;
+  }
+
+  .footer {
+    text-align: center;
+
+    .img-footer {
+      display: none;
+    }
+  }
+}
