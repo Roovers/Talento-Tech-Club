@@ -1,86 +1,106 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 
+:root {
+  --primary-color: rgba(249, 173, 0);
+  --secondary-color: rgba(0, 0, 54, 0.5);
+  --text-color: rgba(255, 211, 107, 0.932);
+  --background-gradient: linear-gradient(rgba(0, 0, 0, 0.555), rgba(0, 0, 0, 0.562));
+}
+
+
 body {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.555), rgba(0, 0, 0, 0.562)),
-    url(../img/fondo.webp);
+  background-image: var(--background-gradient), url(../img/fondo.webp);
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   height: 100vh;
   margin: 0;
+  font-family: 'Rubik', sans-serif;
 }
 
-.header {
+
+.navbar {
   background-image: linear-gradient(
     112.1deg,
     rgba(0, 0, 0, 0) 11.4%,
     rgba(0, 2, 95, 0.555) 75.2%
   );
-  color: rgb(255, 255, 255);
+}
 
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(249, 173, 0)' stroke-width='3' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.navbar-brand {
   .logo-header {
     width: 190px;
     height: 126px;
   }
 
-  .menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
+  .carrito {
+    width: 35px;
+    height: 30px;
+    margin-right: 100px;
   }
+}
 
-  .contenido-menu {
-    display: flex;
-    align-items: center;
-    width: 100%;
-  }
+.navbar-nav .nav-link,
+.log-cart .nav-link {
+  font-family: "Rubik", sans-serif;
+  color: var(--primary-color);
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 5px;
+  position: relative;
+  overflow: hidden;
+  margin-right: 20px;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
 
-  .opciones ul {
-    display: flex;
-    gap: 20px;
-    list-style: none;
-    margin-left: 400px;
-    padding: 0;
-  }
+.navbar-nav .nav-link:hover,
+.log-cart .nav-link:hover {
+  color: white;
+  text-shadow: 
+    0 0 15px rgb(21, 0, 114), 
+    0 0 10px rgb(92, 89, 255),
+    0 0 6px rgb(15, 0, 153);
+}
 
-  .opciones li {
-    list-style: none;
-  }
+.navbar-nav .nav-link::after,
+.log-cart .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: #ffeb3b;
+  transition: width 0.5s ease, left 0.5s ease;
+}
 
-  a {
-    font-family: "Rubik", sans-serif;
-    color: rgba(249, 173, 0);
-    font-family: "Rubik", serif;
-    font-size: 18px;
-    font-weight: 400;
-    margin-right: 20px;
-    letter-spacing: 5px;
-    position: relative;
-    overflow: hidden;
-  }
+.navbar-nav .nav-link:hover::after,
+.log-cart .nav-link:hover::after {
+  width: 100%;
+  left: 0;
+}
 
-  a:hover {
-    transition: color 2s ease;
-    color: rgb(255, 255, 255);
-    text-shadow: 0 0 15px rgb(21, 0, 114), 0 0 10px rgb(92, 89, 255),
-      0 0 6px rgb(15, 0, 153);
-  }
+.log-cart {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-right: 50px;
 
-  .nav-link::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-    width: 0;
-    height: 2px;
-    background: #ffeb3b;
-    transition: width 0.5s ease, left 0.5s ease;
-  }
+  i {
+    color: var(--primary-color);
+    transition: color 0.3s ease, text-shadow 0.3s ease;
 
-  .nav-link:hover::after {
-    width: 100%;
-    left: 0;
+    &:hover {
+      color: white;
+      text-shadow: 
+        0 0 15px rgb(21, 0, 114), 
+        0 0 10px rgb(92, 89, 255),
+        0 0 6px rgb(15, 0, 153);
+    }
   }
 }
 
@@ -91,25 +111,27 @@ body {
   margin: 20px;
 
   .card {
-    background-color: rgba(0, 0, 54, 0.5);
+    background-color: var(--secondary-color);
     border: 1px solid rgba(249, 174, 0, 0.658);
-    color: rgba(255, 211, 107, 0.932);
+    color: var(--text-color);
 
     .btn {
-      background-color: rgba(0, 0, 54, 0.5);
+      background-color: var(--secondary-color);
       border: 1px solid rgba(249, 174, 0, 0.658);
-      color: rgba(255, 211, 107, 0.932);
-    }
+      color: var(--text-color);
+      transition: color 2s ease, text-shadow 2s ease;
 
-    .btn:hover {
-      transition: color 2s ease;
-      color: rgb(255, 255, 255);
-      text-shadow: 0 0 15px rgb(21, 0, 114), 0 0 10px rgb(92, 89, 255),
-        0 0 6px rgb(15, 0, 153);
-    }
+      &:hover {
+        color: white;
+        text-shadow: 
+          0 0 15px rgb(21, 0, 114), 
+          0 0 10px rgb(92, 89, 255),
+          0 0 6px rgb(15, 0, 153);
+      }
 
-    i {
-      margin-left: 15px;
+      i {
+        margin-left: 15px;
+      }
     }
   }
 }
@@ -120,14 +142,9 @@ body {
   align-items: center;
   margin-top: 40px;
 
-  .card {
-    background-color: rgba(0, 0, 54, 0.5);
-    border: 1px solid rgba(249, 174, 0, 0.658);
-    color: rgba(255, 242, 213, 0.932);
-  }
-
+  .card,
   iframe {
-    background-color: rgba(0, 0, 54, 0.5);
+    background-color: var(--secondary-color);
     border: 1px solid rgba(249, 174, 0, 0.658);
     color: rgba(255, 242, 213, 0.932);
   }
@@ -144,13 +161,14 @@ body {
   height: 200px;
 }
 
+
 .footer {
   background-image: linear-gradient(
     292.1deg,
     rgba(0, 0, 0, 0) 11.4%,
     rgba(0, 2, 95, 0.555) 75.2%
   );
-  color: rgb(255, 255, 255);
+  color: white;
   padding: 25px;
 
   .footer-contenido {
@@ -159,21 +177,25 @@ body {
     align-items: center;
   }
 
-  .footer-social a {
-    font-size: 30px;
-    margin-right: 20px;
-    color: rgba(249, 173, 0);
-  }
+  .footer-social {
+    a {
+      font-size: 30px;
+      margin-right: 20px;
+      color: var(--primary-color);
+      transition: color 0.3s ease, text-shadow 0.3s ease;
 
-  .footer-social a:hover {
-    transition: color 0.3s ease;
-    color: rgba(255, 255, 255, 0.527);
-    text-shadow: 0 0 15px rgb(21, 0, 114), 0 0 10px rgb(92, 89, 255),
-      0 0 6px rgb(15, 0, 153);
+      &:hover {
+        color: rgba(255, 255, 255, 0.527);
+        text-shadow: 
+          0 0 15px rgb(21, 0, 114), 
+          0 0 10px rgb(92, 89, 255),
+          0 0 6px rgb(15, 0, 153);
+      }
+    }
   }
 
   .footer-info {
-    color: rgba(249, 173, 0);
+    color: var(--primary-color);
   }
 }
 
@@ -182,12 +204,13 @@ body {
   justify-content: center;
   align-items: center;
 }
+
 .socio-form {
   background-color: rgba(0, 0, 0, 0.5);
   border: 1px solid rgb(0, 38, 255);
   box-shadow: 0 0 10px rgb(238, 255, 0);
   font-family: "Rubik", sans-serif;
-  color: rgba(249, 173, 0);
+  color: var(--primary-color);
   font-size: 18px;
   font-weight: 400;
   border-radius: 8px;
@@ -197,43 +220,77 @@ body {
   margin: 20px;
 }
 
-.socio-form h2 {
-  font-size: 1.8em;
-  color: rgba(249, 173, 0);
-  margin-bottom: 1.5em;
-  text-align: center;
+.productos {
+  h2 {
+    color: var(--primary-color);
+  }
+
+  .fa-cart-plus {
+    margin-right: 12px;
+  }
+
+  .btn {
+    background-color: var(--secondary-color);
+    border: 1px solid rgba(249, 174, 0, 0.658);
+    color: var(--text-color);
+    transition: color 2s ease;
+
+    &:hover {
+      color: white;
+      text-shadow: 
+        0 0 15px rgb(21, 0, 114), 
+        0 0 10px rgb(92, 89, 255),
+        0 0 6px rgb(15, 0, 153);
+    }
+  }
+
+  .h-100 {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgb(0, 38, 255);
+    box-shadow: 0 0 10px rgb(238, 255, 0);
+    font-family: "Rubik", sans-serif;
+    color: var(--primary-color);
+  }
+}
+
+.card-producto {
+  width: 18rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 1px solid rgb(0, 38, 255);
+  box-shadow: 0 0 10px rgb(238, 255, 0);
+  font-family: "Rubik", sans-serif;
+  color: var(--primary-color);
 }
 
 .form-group {
   margin-bottom: 20px;
-}
 
-.form-group label {
-  display: block;
-  font-size: 1rem;
-  color: rgba(255, 211, 107, 0.932);
-  font-family: "Rubik", sans-serif;
-  margin-bottom: 6px;
-}
+  label {
+    display: block;
+    font-size: 1rem;
+    color: var(--text-color);
+    font-family: "Rubik", sans-serif;
+    margin-bottom: 6px;
+  }
 
-.form-group input,
-.form-group textarea {
-  color: white;
-  width: 100%;
-  padding: 12px;
-  font-size: 1rem;
-  border: 2px solid rgba(249, 174, 0, 0.658);
-  font-family: "Rubik", sans-serif;
-  border-radius: 5px;
-  transition: all 0.3s ease;
-  background-color: #00000000;
-}
+  input,
+  textarea {
+    color: white;
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 2px solid rgba(249, 174, 0, 0.658);
+    font-family: "Rubik", sans-serif;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    background-color: transparent;
 
-.form-group input:focus,
-.form-group textarea:focus {
-  outline: none;
-  border: 1px solid rgb(0, 38, 255);
-  box-shadow: 0 0 10px rgb(238, 255, 0);
+    &:focus {
+      outline: none;
+      border: 1px solid rgb(0, 38, 255);
+      box-shadow: 0 0 10px rgb(238, 255, 0);
+    }
+  }
 }
 
 textarea {
@@ -243,63 +300,26 @@ textarea {
 button[type="submit"] {
   width: 100%;
   padding: 12px;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: var(--secondary-color);
   border: 1px solid rgba(249, 174, 0, 0.658);
-  color: rgba(255, 211, 107, 0.932);
+  color: var(--text-color);
   font-size: 1.1rem;
   font-weight: bold;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
-}
+  transition: all 0.3s ease;
 
-button[type="submit"]:hover {
-  transition: color 2s ease;
-  transform: 4s;
-  color: rgb(255, 255, 255);
-  text-shadow: 0 0 15px rgb(21, 0, 114), 0 0 10px rgb(92, 89, 255),
-    0 0 6px rgb(15, 0, 153);
-  border: 1px solid rgb(0, 38, 255);
-  box-shadow: 0 0 10px rgb(238, 255, 0);
-}
-
-.card-producto {
-  width: 18rem;
-  background-color: rgba(0, 0, 0, 0.5);
-  border: 1px solid rgb(0, 38, 255);
-  box-shadow: 0 0 10px rgb(238, 255, 0);
-  font-family: "Rubik", sans-serif;
-  color: rgba(249, 173, 0);
-}
-
-.productos {
-  h2 {
-    color: rgba(249, 173, 0);
-  }
-  .fa-cart-plus {
-    margin-right: 12px;
-  }
-  .btn {
-    background-color: rgba(0, 0, 54, 0.5);
-    border: 1px solid rgba(249, 174, 0, 0.658);
-    color: rgba(255, 211, 107, 0.932);
-  }
-
-  .btn:hover {
-    transition: color 2s ease;
-    color: rgb(255, 255, 255);
-    text-shadow: 0 0 15px rgb(21, 0, 114), 0 0 10px rgb(92, 89, 255),
+  &:hover {
+    color: white;
+    text-shadow: 
+      0 0 15px rgb(21, 0, 114), 
+      0 0 10px rgb(92, 89, 255),
       0 0 6px rgb(15, 0, 153);
-  }
-
-  .h-100 {
-    background-color: rgba(0, 0, 0, 0.5);
     border: 1px solid rgb(0, 38, 255);
     box-shadow: 0 0 10px rgb(238, 255, 0);
-    font-family: "Rubik", sans-serif;
-    color: rgba(249, 173, 0);
   }
 }
+
 
 @media (max-width: 767px) {
   body {
@@ -312,11 +332,13 @@ button[type="submit"]:hover {
     }
   }
 
-  .header .menu {
-    .logo-header {
-      display: none;
-    }
+  .navbar-brand .carrito {
+    width: 40px;
+    height: 35px;
+    margin-right: 100px;
+  }
 
+  .header .menu {
     .contenido-menu {
       padding: 25px;
       display: flex;
