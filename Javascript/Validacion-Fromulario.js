@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
         alerta.classList.add('alerta-personalizada');
         alerta.innerHTML = `
             <div class="alerta-contenido">
-                <img src="../img/tarjetas.png" style="height: 100px;" alt="logo" class="logo-header">
+                <img src="./img/tarjetas.png" style="height: 100px;" alt="logo" class="logo-header">
                 <p>${mensaje}</p>
             </div>
         `;
