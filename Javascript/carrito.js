@@ -80,7 +80,7 @@ function mostrarModalFinalizacion() {
               </div>
               <div class="modal-body text-center">
                   <p>Para finalizar su compra, escanee el siguiente código QR:</p>
-                  <img src="../img/qr.png" alt="Código QR de Pago" 
+                  <img src="./img/qr.png" alt="Código QR de Pago" 
                        style="max-width: 250px; margin: 20px auto;">
               </div>
               <div class="modal-footer">
